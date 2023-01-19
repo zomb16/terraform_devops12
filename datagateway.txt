@@ -1,0 +1,5 @@
+$video_url1 = 'https://download.microsoft.com/download/D/A/1/DA1FDDB8-6DA8-4F50-B4D0-18019591E182/GatewayInstall.exe'
+$local_video_url1 = 'GatewayInstall.exe'
+$wc = New-Object net.webclient
+$wc.Downloadfile($video_url1, $local_video_url1)
+Start-Process -FilePath .\GatewayInstall.exe /S -NoNewWindow -Wait -PassThru
